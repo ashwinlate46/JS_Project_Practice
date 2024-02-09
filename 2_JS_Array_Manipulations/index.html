@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.css">
+</head>
+
+<body class="container-fluid" onload="LoadCities()">
+    <div class="w-25 mt-2">
+        <label class="form-label fw-bold">Add New City Name</label>
+        <div class="input-group">
+            <input type="text" id="textCity" placeholder="New City Name" class="form-control"> <button
+                class="btn btn-primary" onclick="AddClick()">Add</button>
+        </div>
+        <div class="mt-4">
+            <div class="mb-2">
+                <button onclick="sortAsc()" class="bi bi-sort-alpha-down btn btn-warning"></button>
+                <button onclick="sortDsc()" class="bi bi-sort-alpha-up btn btn-success"></button>
+            </div>
+            <select class="form-select" id="lstCities" size="3">
+
+            </select>
+            <label class="form-label fw-bold" id="lblCount"></label>
+            <div class="mt-4">
+                <button onclick="removeClick()" class="bi bi-trash btn btn-danger">Remove City</button>
+                <button onclick="clearAll()" class="bi bi-trash btn btn-outline-danger">Clear All</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
